@@ -1,1 +1,16 @@
-<p>header works!</p>
+<mat-toolbar>
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <div class="theme-control">
+    <button mat-icon-button (click)="toggleTheme()" matTooltip="Altere o tema">
+      @if (themeService.themeSignal() === 'dark') {
+
+      <mat-icon>bedtime</mat-icon>
+      } @else {
+      <mat-icon>brightness_5</mat-icon>
+      }
+    </button>
+  </div>
+</mat-toolbar>
