@@ -12,18 +12,22 @@ export const routes: Routes = [
   },
   {
     path: 'home',
+    title: 'Portfolio - Inicio',
     component: HomeComponent,
   },
   {
     path: 'contact',
+    title: 'Portfolio - Contato',
     component: ContactComponent,
   },
   {
     path: 'project',
+    title: 'Portfolio - Projetos',
     component: ProjectComponent,
   },
   {
     path: 'about',
+    title: 'Portfolio - Sobre mim',
     component: AboutComponent,
   },
 ];

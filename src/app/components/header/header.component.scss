@@ -10,7 +10,7 @@ mat-toolbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 300ms ease-in-out;
+    transition: all 100ms ease-in-out;
   }
 }
 
@@ -24,4 +24,8 @@ mat-sidenav-container {
 
 .content {
   padding: 24px;
+}
+
+mat-sidenav, mat-sidenav-content { 
+  transition: all 500ms ease-in-out;
 }
