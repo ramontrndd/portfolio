@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,7 +21,8 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
     MatTooltipModule,
     MatSidenavModule,
     RouterOutlet,
-    SidenavComponent
+    SidenavComponent,
+    
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -32,4 +33,9 @@ export class HeaderComponent {
   toggleTheme() {
     this.themeService.updateTheme();
   }
+
+  collapsed = signal(false);
+
+  sidenavWidth = computed(()=> this.collapsed() ? '65px' : '250px');
+
 }
