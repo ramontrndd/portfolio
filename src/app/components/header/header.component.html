@@ -1,8 +1,7 @@
-<mat-toolbar color="primary" class="mat-elevation-z1">
+<mat-toolbar class="mat-elevation-z3">
   <button mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-
   <div class="theme-control">
     <button mat-icon-button (click)="toggleTheme()" matTooltip="Alterar o tema">
       @if (themeService.themeSignal() === 'dark') {
@@ -13,3 +12,12 @@
     </button>
   </div>
 </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav opened mode="side" [style.width]="'250px'">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

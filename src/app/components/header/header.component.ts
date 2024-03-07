@@ -5,6 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterOutlet } from '@angular/router';
+import { SidenavComponent } from '../sidenav/sidenav.component';
+
 
 @Component({
   selector: 'app-header',
@@ -15,6 +19,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     CommonModule,
     MatTooltipModule,
+    MatSidenavModule,
+    RouterOutlet,
+    SidenavComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
