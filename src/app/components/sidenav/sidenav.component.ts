@@ -36,14 +36,19 @@ export class SidenavComponent {
       route: 'home',
     },
     {
+      icon: 'computer',
+      label: 'Tecnologias',
+      route: 'technology',
+    },
+    {
+      icon: 'manage_accounts',
+      label: 'projetos',
+      route: 'project',
+    },
+    {
       icon: 'account_circle',
       label: 'contato',
       route: 'contact',
-    },
-    {
-      icon: 'computer',
-      label: 'projetos',
-      route: 'project',
     },
     {
       icon: 'person',

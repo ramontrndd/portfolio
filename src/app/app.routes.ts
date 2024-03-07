@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { AboutComponent } from './pages/about/about.component';
+import { TechnologyComponent } from './pages/technology/technology.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,11 @@ export const routes: Routes = [
     path: 'home',
     title: 'Portfolio - Inicio',
     component: HomeComponent,
+  },
+  {
+    path: 'technology',
+    title: 'Portfolio - Tech-Skills',
+    component: TechnologyComponent,
   },
   {
     path: 'contact',
