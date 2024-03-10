@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProgressBarModule } from 'primeng/progressbar';
+import { ButtonModule } from 'primeng/button';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
@@ -9,7 +9,7 @@ import { MatCardModule } from '@angular/material/card';
   selector: 'app-technology',
   standalone: true,
   imports: [
-    ProgressBarModule,
+    ButtonModule,
     MatProgressBarModule,
     MatButtonModule,
     MatDividerModule,

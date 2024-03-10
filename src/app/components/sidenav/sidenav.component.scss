@@ -1,5 +1,5 @@
 :host * {
-  transition: all 500ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .sidenav-header {
@@ -41,7 +41,7 @@
   background: rgba(0, 0, 0, 0.05);
 }
 a {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }

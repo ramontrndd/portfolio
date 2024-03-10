@@ -1,0 +1,30 @@
+.home-text {
+  > h1,
+  h2 {
+    margin: 0;
+  }
+  margin: 5rem 0 0 3rem;
+}
+.home-img {
+  i {
+    font-size: 3rem;
+  }
+  > a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  margin-left: 2.5rem;
+}
+.home-links {
+  > button, a {
+    margin: 5px;
+  }
+  padding: 5px;
+  margin-left: 2rem;
+}
+
+:host * {
+  transition: all 200ms ease-in-out;
+}
