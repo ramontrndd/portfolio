@@ -16,6 +16,11 @@ mat-card-content {
 mat-card-title {
   text-align: center;
 }
-
-
-
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
