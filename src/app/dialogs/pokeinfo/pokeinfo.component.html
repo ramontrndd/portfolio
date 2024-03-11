@@ -1,0 +1,21 @@
+<p-galleria
+  color="primary"
+  [value]="images"
+  [numVisible]="5"
+  [circular]="true"
+  [showItemNavigators]="true"
+  [showThumbnails]="false"
+  [responsiveOptions]="responsiveOptions"
+  [containerStyle]="{ 'max-width': '640px' }"
+  [autoPlay]="true"
+>
+  <ng-template pTemplate="item" let-item>
+    <img [src]="item.itemImageSrc" style="width: 100%; display: block" />
+  </ng-template>
+</p-galleria>
+
+<mat-dialog-actions align="center"
+  ><button mat-raised-button mat-dialog-close color="warn">
+    SAIR
+  </button></mat-dialog-actions
+>
