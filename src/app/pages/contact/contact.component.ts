@@ -16,6 +16,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { ThemeService } from '../../services/theme.service';
+import { GlobalConstants } from '../../../assets/global-constants';
 
 @Component({
   selector: 'app-contact',
@@ -40,9 +41,9 @@ export class ContactComponent implements OnInit {
     private snackBar: MatSnackBar 
   ) {
     this.contactForm = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      message: new FormControl('', Validators.required),
+      name: new FormControl(null, [Validators.required,Validators.pattern(GlobalConstants.nameRegex)]),
+      email: new FormControl(null, [Validators.required, Validators.pattern(GlobalConstants.emailRegex)]),
+      message: new FormControl(null, Validators.required),
     });
   }
 

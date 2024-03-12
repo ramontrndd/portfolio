@@ -13,7 +13,7 @@
   > h4 {
     font-weight: bold;
   }
-  margin: 5rem 0 0 3rem;
+
   font-family: "Poppins", sans-serif;
 }
 .home-img {
@@ -25,17 +25,12 @@
     text-decoration: none;
     color: white;
   }
-
-  margin-left: 2.5rem;
 }
 .home-links {
   > button,
   a {
     margin: 5px;
   }
-  padding: 5px;
-  margin-left: 2rem;
-  margin-top: 10px;
 }
 
 .home-img {
@@ -44,7 +39,6 @@
     border-radius: 100%;
     border: 2px solid #0076b2;
     padding: 10px;
-    margin-top: 30px;
   }
 }
 
@@ -52,5 +46,26 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 360px) and (max-width: 720px) {
+  .home-container {
+    flex-direction: column-reverse;
+    margin: 15px;
+  }
+  .home-img {
+    margin-bottom: 10px;
+  }
+  .home-text {
+    > h2 {
+      letter-spacing: 0;
+    }
+    > h1,
+    h2,
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
 }
