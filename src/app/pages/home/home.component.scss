@@ -46,11 +46,11 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 30px;
 }
 
-@media screen and (min-width: 360px) and (max-width: 720px) {
+@media screen and (min-width: 280px) and (max-width: 720px) {
   .home-container {
     flex-direction: column-reverse;
     margin: 15px;
@@ -67,5 +67,10 @@
     h4 {
       margin-bottom: 5px;
     }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home-container {
+    margin: 20px;
   }
 }
