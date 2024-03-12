@@ -1,1 +1,64 @@
-<p>contact works!</p>
+<mat-dialog-content>
+  <form [formGroup]="contactForm" (ngSubmit)="handleSubmit()" class="emailForm">
+    <h2>Contato</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Digite seu nome"
+        formControlName="name"
+        required
+        minlength="3"
+        maxlength="50"
+      />
+      <mat-error
+        *ngIf="
+          contactForm.get('name')?.invalid &&
+          (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)
+        "
+      >
+        O nome é obrigatório e deve ter entre 3 e 50 caracteres.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        placeholder="Digite seu Email"
+        formControlName="email"
+        required
+      />
+      <mat-error
+        *ngIf="
+          contactForm.get('email')?.invalid &&
+          (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)
+        "
+      >
+        Por favor, insira um endereço de email válido.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Mensagem</mat-label>
+      <textarea
+        matInput
+        cols="30"
+        rows="5"
+        placeholder="Escreva sua mensagem"
+        formControlName="message"
+        required
+      ></textarea>
+      <mat-error
+        *ngIf="
+          contactForm.get('message')?.invalid &&
+          (contactForm.get('message')?.dirty ||
+            contactForm.get('message')?.touched)
+        "
+      >
+        A mensagem é obrigatória.
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Enviar</button>
+  </form>
+</mat-dialog-content>
