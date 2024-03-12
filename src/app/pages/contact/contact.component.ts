@@ -1,9 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import {
   FormBuilder,
@@ -13,6 +15,7 @@ import {
   ReactiveFormsModule,
   FormControl,
 } from '@angular/forms';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-contact',
@@ -25,14 +28,17 @@ import {
     FormsModule,
     MatDialogModule,
     ReactiveFormsModule,
+    MatTooltipModule,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
-
-  constructor() {
+  themeService: ThemeService = inject(ThemeService);
+  constructor(
+    private snackBar: MatSnackBar 
+  ) {
     this.contactForm = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -57,13 +63,34 @@ export class ContactComponent implements OnInit {
         .send(serviceId, templateId, templateParams, publicKey)
         .then((response: EmailJSResponseStatus) => {
           console.log('Email sent successfully!', response);
-          this.contactForm.reset(); // Resetando o formulário após o envio bem-sucedido
+          this.contactForm.reset();
+          this.snackBar.open('Email enviado com sucesso!', 'Fechar', {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['green-snackbar'],
+          }); // Exibir snackbar de sucesso!
         })
         .catch((error: any) => {
           console.error('Error sending email:', error);
+          this.snackBar.open('Erro ao enviar email.', 'Fechar', {
+            duration: 3000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['black-snackbar'],
+          }); // Exibir snackbar de erro!
         });
     } else {
-      console.log('Por favor, preencha todos os campos corretamente.');
+      this.snackBar.open(
+        'Por favor, preencha todos os campos corretamente.',
+        'fechar',
+        {
+          duration: 3000,
+          horizontalPosition: 'center',
+          verticalPosition: 'top',
+          panelClass: ['black-snackbar'],
+        }
+      );
     }
   }
 

@@ -1,6 +1,39 @@
 <mat-dialog-content>
-  <form [formGroup]="contactForm" (ngSubmit)="handleSubmit()" class="emailForm">
-    <h2>Contato</h2>
+  <form
+    [formGroup]="contactForm"
+    (ngSubmit)="handleSubmit()"
+    class="emailForm mat-elevation-z4"
+  >
+    <div class="home-img">
+      <a
+        href="https://github.com/ramontrndd"
+        target="_blank"
+        matTooltip="Ir para GitHub"
+      >
+        @if (themeService.themeSignal() === 'dark') {
+        <i class="devicon-github-original-wordmark"></i>
+        } @else {
+        <i class="devicon-github-original-wordmark colored"></i>
+        }
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/ramontrndd/"
+        target="_blank"
+        matTooltip="Ir para Linkedin"
+      >
+        @if (themeService.themeSignal() === 'dark') {
+
+        <i class="devicon-linkedin-plain"></i>
+
+        } @else {
+
+        <i class="devicon-linkedin-plain colored"></i>
+
+        }
+      </a>
+    </div>
+    
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
       <input
@@ -59,6 +92,14 @@
         A mensagem é obrigatória.
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Enviar</button>
+    <button
+      
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!(contactForm.valid && contactForm.dirty)"
+    >
+      Enviar
+    </button>
   </form>
 </mat-dialog-content>
