@@ -17,24 +17,24 @@
         <i class="devicon-github-original-wordmark colored"></i>
         }
       </a>
-  
+
       <a
         href="https://www.linkedin.com/in/ramontrndd/"
         target="_blank"
         matTooltip="Ir para Linkedin"
       >
         @if (themeService.themeSignal() === 'dark') {
-  
+
         <i class="devicon-linkedin-plain"></i>
-  
+
         } @else {
-  
+
         <i class="devicon-linkedin-plain colored"></i>
-  
+
         }
       </a>
     </div>
-  
+
     <div class="home-links">
       <a
         matTooltip="Baixe meu curriculo"
@@ -45,14 +45,6 @@
         >Download CV</a
       >
       <button
-        matTooltip="Entre em contato!"
-        mat-raised-button
-        color="primary"
-        routerLink="/contact"
-      >
-        Contate-me!
-      </button>
-      <button
         matTooltip="Veja meus projetos!"
         mat-raised-button
         color="primary"
@@ -60,11 +52,18 @@
       >
         Projetos
       </button>
+      <button
+        matTooltip="Entre em contato!"
+        mat-raised-button
+        color="primary"
+        routerLink="/contact"
+      >
+        Contate-me!
+      </button>
     </div>
   </div>
-  
-  
+
   <div class="home-img">
-    <img src="assets/profile2.jpg" alt="profile image">
+    <img src="assets/profile2.jpg" alt="profile image" />
   </div>
 </div>
