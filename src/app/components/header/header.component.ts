@@ -44,7 +44,7 @@ export class HeaderComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1280) {
       this.collapsed.set(false);
     } else {
       this.collapsed.set(true);
