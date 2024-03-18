@@ -1,6 +1,7 @@
 import {
   Component,
   HostListener,
+  OnInit,
   computed,
   inject,
   signal,
@@ -29,9 +30,9 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
     SidenavComponent,
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   themeService: ThemeService = inject(ThemeService);
 
   toggleTheme() {
@@ -43,8 +44,16 @@ export class HeaderComponent {
   sidenavWidth = computed(() => (this.collapsed() ? '65px' : '250px'));
 
   @HostListener('window:resize', ['$event'])
-  onResize() {
-    if (window.innerWidth >= 1280) {
+  onResize(event: any) {
+    this.updateSidenavVisibility();
+  }
+
+  ngOnInit() {
+    this.updateSidenavVisibility();
+  }
+
+  private updateSidenavVisibility() {
+    if (window.innerWidth >= 768) {
       this.collapsed.set(false);
     } else {
       this.collapsed.set(true);
