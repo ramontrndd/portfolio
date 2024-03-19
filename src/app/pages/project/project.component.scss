@@ -1,5 +1,6 @@
 .card-container{
   display: inline-flex;
+  flex-wrap: wrap;
 }
 .card-content {
   max-width: 300px;
