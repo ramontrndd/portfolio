@@ -1,3 +1,6 @@
+.card-container{
+  display: inline-flex;
+}
 .card-content {
   max-width: 300px;
   margin: 15px;
@@ -8,6 +11,7 @@
   align-items: center;
   justify-content: flex-end;
 }
+
 mat-card-actions {
   > button,
   a {

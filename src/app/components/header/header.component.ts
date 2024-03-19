@@ -52,7 +52,8 @@ export class HeaderComponent implements OnInit {
     this.updateSidenavVisibility();
   }
 
-  private updateSidenavVisibility() {
+  public updateSidenavVisibility() {
+    if (typeof window !== 'undefined')
     if (window.innerWidth >= 768) {
       this.collapsed.set(false);
     } else {
