@@ -1,4 +1,4 @@
-<mat-dialog-content>
+<mat-dialog-content class="animate__animated animate__bounceInRight">
   <form
     [formGroup]="contactForm"
     (ngSubmit)="handleSubmit()"
@@ -33,7 +33,7 @@
         }
       </a>
     </div>
-    
+
     <mat-form-field appearance="fill">
       <mat-label>Nome</mat-label>
       <input
@@ -93,7 +93,7 @@
       </mat-error>
     </mat-form-field>
     <button
-      
+
       mat-raised-button
       color="primary"
       type="submit"

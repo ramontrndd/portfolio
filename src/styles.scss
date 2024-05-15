@@ -33,7 +33,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       --mdc-snackbar-supporting-text-color: #fff !important;
     }
     text-align: center;
-    
+
     font-weight: bold;
   }
   .mat-snack-bar-container {
@@ -44,4 +44,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     max-width: 100vw !important;
     margin-top: 70px !important;
     padding: 20px !important;
+  }
+
+  
+  :root {
+    --animate-duration: 1000ms;
+    --animate-delay: 1s;
   }
