@@ -1,0 +1,56 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navbar span {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #16f2b3;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+.navbar-menu li {
+  display: inline;
+}
+.navbar-menu a {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 50%;
+  background: #16f2b3;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+  transform-origin: center;
+}
+.navbar-menu a:hover::after {
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.navbar-menu a:hover {
+  color: #ec4899;
+}
