@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-html,
+html {
+  min-height: 100%;
+}
+
 body {
-  height: auto;
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
   background-image: linear-gradient(
     to right bottom,
     #000000,
@@ -19,8 +24,4 @@ body {
   );
   background-size: cover;
   background-repeat: no-repeat;
-}
-body {
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
 }

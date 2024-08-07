@@ -6,14 +6,14 @@
 
 .carousel {
   position: relative;
-  width: 100%;
+  width: 30%;
   height: auto; /* Ajuste conforme necessário */
 }
 
 .carousel-inner {
   display: flex;
   width: 100%;
-  animation: scroll 18s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .card {
