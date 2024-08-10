@@ -73,6 +73,7 @@ img {
   animation-play-state: paused;
 }
 h3 {
+  display: flex;
   font-size: 1rem;
   position: relative;
   font-family: 'Ubuntu', sans-serif;
@@ -102,5 +103,5 @@ h3::before {
 
 h3::after {
   top: 50%;
-  transform: translate(50%);
+  transform: translate(250%);
 }
