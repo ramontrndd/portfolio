@@ -58,8 +58,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       title: 'GitHub',
-      image:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+      image: 'github-brands-solid.svg',
     },
     {
       title: 'Bootstrap',
