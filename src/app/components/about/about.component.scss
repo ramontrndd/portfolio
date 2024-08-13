@@ -64,53 +64,13 @@ h1 {
     font-size: 1.1rem;
   }
 }
-
-h1::before,
-h1::after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  border-top: 3px solid #15001fd5;
-}
-
-h1::before {
-  top: 50%;
-  transform: translate(-150%);
-}
-
-h1::after {
-  top: 50%;
-  transform: translate(50%);
-}
-
 @media (344px <= width <= 380px) {
-  h1::before,
-  h1::after {
-    content: '';
-    position: absolute;
-    width: 20%;
-    border-top: 3px solid #15001fd5;
-  }
-  h1 {
-    margin-top: 30px;
-  }
-
   section p {
     font-size: 1rem;
     padding: 15px;
   }
 }
 @media (381px <= width <= 728px) {
-  h1::before,
-  h1::after {
-    content: '';
-    position: absolute;
-    width: 25%;
-    border-top: 3px solid #15001fd5;
-  }
-  h1 {
-    margin-top: 30px;
-  }
   section p {
     font-size: 1.2rem;
     padding: 15px;
