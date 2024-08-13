@@ -6,24 +6,15 @@
   (focus)="pauseAnimation()"
 >
   <div class="carousel-inner" #carouselInner>
-    @for (card of cardSKills; track card) {
-    <article class="card">
-      <figure class="package">
-        <div class="package2">
-          <img [src]="card.image" alt="Avatar" class="image" />
-          <figcaption class="text">{{ card.title }}</figcaption>
-        </div>
-      </figure>
-    </article>
-    } @for (card of cardSKills; track card) {
-    <article class="card">
-      <figure class="package">
-        <div class="package2">
-          <img [src]="card.image" alt="Avatar" class="image" />
-          <figcaption class="text">{{ card.title }}</figcaption>
-        </div>
-      </figure>
-    </article>
-    }
+    <ng-container *ngFor="let card of cardSKills">
+      <article class="card">
+        <figure class="package">
+          <div class="package2">
+            <img [src]="card.image" alt="Avatar" class="image" />
+            <figcaption class="text">{{ card.title }}</figcaption>
+          </div>
+        </figure>
+      </article>
+    </ng-container>
   </div>
 </section>

@@ -1,15 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Card } from '../../shared/models/Card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+  styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit {
   cardSKills: Card[] = [
     {
       title: 'Angular',
@@ -74,6 +74,11 @@ export class SkillsComponent {
   ];
 
   @ViewChild('carouselInner') carouselInner!: ElementRef;
+
+  ngOnInit() {
+    // Duplicate the items to create an infinite scroll effect
+    this.cardSKills = [...this.cardSKills, ...this.cardSKills];
+  }
 
   pauseAnimation() {
     if (this.carouselInner) {
