@@ -1,6 +1,8 @@
+<!-- eslint-disable @angular-eslint/template/click-events-have-key-events -->
 <h3>Projetos</h3>
-@for (project of projects; track $index) {
-<mat-card class="mat-elevation-z4">
+@for (project of projects; track project; let i = $index) {
+
+<mat-card class="container">
   <mat-card-content>
     <mat-card-title>
       <h1>{{ project.title }}</h1>
@@ -10,11 +12,30 @@
       <button>{{ label }}</button> }
     </mat-card-subtitle>
     <img mat-card-image src="{{ project.image }}" alt="{{ project.alt }}" />
-    <p>{{ project.description }}</p>
+    <div class="text-container" [ngClass]="{ expanded: expanded[i] }">
+      <p>
+        {{
+          expanded[i]
+            ? project.description
+            : (project.description | slice : 0 : textLimit) + '...'
+        }}
+        @if (project.description.length > textLimit) {
+        <a (click)="toggleText(i)" tabindex="0" class="read-more">
+          {{ expanded[i] ? 'Ver menos' : 'Ver mais' }}
+        </a>
+        }
+      </p>
+    </div>
   </mat-card-content>
+
   <mat-card-actions>
-    <button mat-button><mat-icon>terminal</mat-icon>GitHub</button>
-    <button mat-button><mat-icon>language</mat-icon>Demo</button>
+    <a mat-button href="{{ project.github }}" target="_blank"
+      ><mat-icon>terminal</mat-icon>GitHub</a
+    >
+
+    <a mat-button href="{{ project.demo }}" target="_blank"
+      ><mat-icon>language</mat-icon>Demo</a
+    >
   </mat-card-actions>
 </mat-card>
 

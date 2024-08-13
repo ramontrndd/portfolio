@@ -1,9 +1,11 @@
-mat-card {
+.container {
   margin: 10px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   background-color: #15001f9d;
   width: 400px;
   max-width: 500px;
+  display: inline-flex;
+  margin-left: 60px;
 }
 mat-card-title {
   h1 {
@@ -21,7 +23,16 @@ mat-card-content {
     font-size: 1rem;
     font-family: 'Ubuntu', sans-serif;
     color: #fff;
-    text-align: center;
+    text-align: justify;
+  }
+
+  img {
+    margin: 10px auto;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
   }
 }
 
@@ -29,6 +40,8 @@ mat-card-subtitle {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
+  flex-wrap: wrap;
+
   button {
     text-transform: uppercase;
     background-color: aquamarine;
@@ -47,7 +60,7 @@ mat-card-actions {
   display: flex;
   justify-content: center;
   gap: 10px;
-  button {
+  a {
     text-transform: uppercase;
     background-color: #fff;
     font-size: 1rem;
@@ -60,6 +73,27 @@ mat-card-actions {
     border-radius: 30px;
     margin-bottom: 10px;
   }
+}
+.text-container {
+  max-height: 150px; /* Altura inicial */
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out; /* Transição suave */
+}
+
+.text-container.expanded {
+  max-height: 1000px; /* Altura máxima quando expandido (ajuste conforme necessário) */
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
 }
 
 h3 {
