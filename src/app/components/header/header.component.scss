@@ -134,3 +134,31 @@
     display: flex;
   }
 }
+
+@media (344px <= width <= 380px) {
+  .name {
+    display: flex;
+    > span {
+      font-size: 1.1rem;
+    }
+
+    > mat-icon {
+      color: #16f2b3;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (381px <= width <= 728px) {
+  .name {
+    display: flex;
+    > span {
+      font-size: 1.5rem;
+    }
+
+    > mat-icon {
+      color: #16f2b3;
+      margin-left: 10px;
+    }
+  }
+}

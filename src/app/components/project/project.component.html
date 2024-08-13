@@ -1,0 +1,21 @@
+<h3>Projetos</h3>
+@for (project of projects; track $index) {
+<mat-card class="mat-elevation-z4">
+  <mat-card-content>
+    <mat-card-title>
+      <h1>{{ project.title }}</h1>
+    </mat-card-title>
+    <mat-card-subtitle>
+      @for (label of project.label; track $index) {
+      <button>{{ label }}</button> }
+    </mat-card-subtitle>
+    <img mat-card-image src="{{ project.image }}" alt="{{ project.alt }}" />
+    <p>{{ project.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button><mat-icon>terminal</mat-icon>GitHub</button>
+    <button mat-button><mat-icon>language</mat-icon>Demo</button>
+  </mat-card-actions>
+</mat-card>
+
+}
