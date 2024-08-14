@@ -1,12 +1,12 @@
 :host {
   text-decoration: none;
 }
-
 main {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: auto;
+  margin-top: 90px;
 }
 section h1 {
   font-family: 'Ubuntu', sans-serif;
@@ -52,7 +52,6 @@ section h1 {
 /* ===========================CARD======================== */
 
 .card {
-  margin-top: 60px;
   width: 500px;
   max-width: 500px; /* Define a largura máxima do card */
   height: auto; /* Ajusta a altura automaticamente */
@@ -63,6 +62,7 @@ section h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Flexbox para arranjar elementos na vertical */
+  justify-content: flex-end;
 }
 
 /* Ajusta a barra de título para ter largura total */
@@ -234,7 +234,7 @@ code {
   main {
     flex-direction: column;
     align-items: center;
-    margin-top: 50px; /* Ajusta a margem superior em telas menores */
+    margin-top: 10px; /* Ajusta a margem superior em telas menores */
   }
   .card {
     width: 80vw; /* Faz o card ocupar toda a largura da viewport em telas muito pequenas */
