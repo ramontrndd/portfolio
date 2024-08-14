@@ -7,6 +7,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectComponent } from './components/project/project.component';
 import { GuideButtonComponent } from './shared/shared-ui/guide-button/guide-button.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
     ProjectComponent,
     GuideButtonComponent,
     ContactComponent,
+    ExperienceComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,3 +1,7 @@
+:host {
+  text-decoration: none;
+}
+
 main {
   display: flex;
   align-items: center;
@@ -185,7 +189,7 @@ code {
   cursor: pointer;
   height: 50px;
   width: 50px;
-  font-family: 'Titillium Web', sans-serif;
+
   color: #333;
   border-radius: 4px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -219,11 +223,11 @@ code {
   width: 110px;
 }
 
-#linkedin svg {
+.linkedin svg {
   fill: #0e76a8;
 }
 
-#github {
+.github {
   fill: #333;
 }
 @media screen and (min-width: 344px) and (max-width: 480px) {
