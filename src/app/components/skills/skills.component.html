@@ -5,7 +5,8 @@
   (focus)="pauseAnimation()"
 >
   <div class="carousel-inner" #carouselInner>
-    <ng-container *ngFor="let card of cardSKills">
+    @for (card of cardSKills; track $index) {
+    <ng-container>
       <article class="card">
         <figure class="package">
           <div class="package2">
@@ -13,7 +14,7 @@
             <figcaption class="text">{{ card.title }}</figcaption>
           </div>
         </figure>
-      </article>
-    </ng-container>
+      </article> </ng-container
+    >}
   </div>
 </section>

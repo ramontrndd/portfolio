@@ -25,3 +25,35 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+// SNACK BAR STYLE
+
+.mat-mdc-snack-bar-container {
+  &.green-snackbar {
+    --mdc-snackbar-container-color: #0076b2 !important;
+    --mat-mdc-snack-bar-button-color: #fff !important;
+    --mdc-snackbar-supporting-text-color: #fff !important;
+  }
+  text-align: center;
+
+  font-weight: bold;
+}
+.mat-mdc-snack-bar-container {
+  &.black-snackbar {
+    --mdc-snackbar-container-color: black !important;
+    --mat-mdc-snack-bar-button-color: #fff !important;
+    --mdc-snackbar-supporting-text-color: #fff !important;
+  }
+  text-align: center;
+
+  font-weight: bold;
+}
+.mat-snack-bar-container {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: 40vw !important;
+  min-width: 90% !important;
+  max-width: 100vw !important;
+  margin-top: 70px !important;
+  padding: 20px !important;
+}

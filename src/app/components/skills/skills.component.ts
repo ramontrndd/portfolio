@@ -1,11 +1,11 @@
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 import { Card } from '../../shared/models/Card';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
