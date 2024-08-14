@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
@@ -28,4 +28,5 @@ import { ExperienceComponent } from './components/experience/experience.componen
 })
 export class AppComponent {
   title = 'portfolio';
+  @ViewChild('loadProjectComponent') loadProjectComponent!: ElementRef;
 }
