@@ -1,0 +1,288 @@
+:host {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  margin-top: 90px;
+}
+section h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  color: white;
+}
+.name {
+  color: #ec4899;
+}
+.typing-container {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #16f2b3;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+  animation: typing 4s steps(50, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* ===========================CARD======================== */
+
+.card {
+  width: 500px;
+  max-width: 500px; /* Define a largura máxima do card */
+  height: auto; /* Ajusta a altura automaticamente */
+  background: #15001f;
+  border: 1px solid #c042ff;
+  font-size: 16px;
+  font-family: monospace;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Flexbox para arranjar elementos na vertical */
+  justify-content: flex-end;
+}
+
+/* Ajusta a barra de título para ter largura total */
+.titlebar {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  background-color: #2e0043;
+  width: 100%;
+  text-align: right;
+}
+
+/* Ajuste os botões dentro do card */
+.card button {
+  width: 40px;
+  height: 35px;
+  margin-left: -5px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  transition: 0.2s;
+}
+
+button svg path,
+button svg rect,
+button svg polygon {
+  fill: #ffffff;
+}
+
+button svg {
+  width: 10px;
+  height: 10px;
+}
+
+.close:hover {
+  background-color: #e81123;
+}
+
+.maximize:hover {
+  background-color: #c042ff2e;
+}
+
+.minimize:hover {
+  background-color: #c042ff2e;
+}
+
+/* Ajustes para a área de código */
+#pre {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  color: #bafff8;
+}
+
+/* Ajusta o estilo do código com flexbox para a quebra de linha */
+.cppcode {
+  overflow-x: hidden; /* Permite rolar horizontalmente se necessário */
+  white-space: pre-wrap; /* Quebra o texto quando necessário */
+  word-wrap: break-word; /* Quebra palavras longas */
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+}
+
+pre {
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
+  overflow: hidden; /* Adiciona barras de rolagem se o conteúdo exceder o tamanho */
+}
+
+code {
+  display: block; /* Garante que o código seja exibido em um bloco */
+  line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+}
+
+.curlies {
+  color: #22ff00;
+}
+
+.sc {
+  color: #e600ff;
+}
+
+.rounds {
+  color: #ffffff;
+}
+
+.operator {
+  color: #ffff00;
+}
+
+.s1 {
+  color: #22ff00;
+}
+
+.s2 {
+  color: #4281ff;
+}
+
+.s3 {
+  color: #ff5490;
+}
+
+.s4 {
+  color: #ffae00;
+}
+
+.s5 {
+  color: #ffffff;
+}
+
+.s6 {
+  color: #ffff00;
+}
+/* ===========================SOCIAL LINKS======================== */
+.social-links,
+.flex-center {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+
+  color: #333;
+  border-radius: 4px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 24px;
+  width: 24px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.social-btn:hover {
+  width: 200px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 2px;
+  width: 110px;
+}
+
+.linkedin svg {
+  fill: #0e76a8;
+}
+
+.github {
+  fill: #333;
+}
+@media screen and (min-width: 344px) and (max-width: 480px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* Ajusta a margem superior em telas menores */
+  }
+  .card {
+    width: 80vw; /* Faz o card ocupar toda a largura da viewport em telas muito pequenas */
+    height: auto; /* Ajusta a altura automaticamente */
+    margin: 10px; /* Margem menor em telas muito pequenas */
+  }
+  .typing-container {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
+  }
+  section h1 {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .titlebar {
+    font-size: 16px; /* Reduz ainda mais o tamanho da fonte para cabeçalhos em telas pequenas */
+  }
+
+  .card button {
+    width: 25px;
+    height: 20px;
+  }
+
+  button svg {
+    width: 6px;
+    height: 6px;
+  }
+  #pre {
+    padding: 5px; /* Reduz o padding em telas pequenas */
+  }
+
+  .cppcode {
+    font-size: 12px; /* Reduz o tamanho da fonte do código em telas pequenas */
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 540px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px; /* Ajusta a margem superior em telas menores */
+  }
+  .card {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1280px) {
+  main {
+    padding: 30px;
+  }
+}

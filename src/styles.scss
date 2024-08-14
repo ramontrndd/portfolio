@@ -1,53 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+html {
+  min-height: 100%;
 }
 
-// STYLE SNACK BAR
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #17050e,
+    #210a1a,
+    #290e28,
+    #2e1239,
+    #2e1541,
+    #2c184a,
+    #281c53,
+    #281c52,
+    #281c51,
+    #281c51,
+    #281c50
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// SNACK BAR STYLE
 
 .mat-mdc-snack-bar-container {
-    &.green-snackbar {
-      --mdc-snackbar-container-color: #0076B2 !important;
-      --mat-mdc-snack-bar-button-color: #fff !important;
-      --mdc-snackbar-supporting-text-color: #fff !important;
-    }
-    text-align: center;
+  &.green-snackbar {
+    --mdc-snackbar-container-color: #2e0043 !important;
+    --mat-mdc-snack-bar-button-color: #fff !important;
+    --mdc-snackbar-supporting-text-color: #fff !important;
+  }
+  &.black-snackbar {
+    --mdc-snackbar-container-color: black !important;
+    --mat-mdc-snack-bar-button-color: #fff !important;
+    --mdc-snackbar-supporting-text-color: #fff !important;
+  }
+  text-align: center;
 
-    font-weight: bold;
-  }
-  .mat-mdc-snack-bar-container {
-    &.black-snackbar {
-      --mdc-snackbar-container-color: black !important;
-      --mat-mdc-snack-bar-button-color: #fff !important;
-      --mdc-snackbar-supporting-text-color: #fff !important;
-    }
-    text-align: center;
-
-    font-weight: bold;
-  }
-  .mat-snack-bar-container {
-    margin-right: auto !important;
-    margin-left: auto !important;
-    width: 40vw !important;
-    min-width: 90% !important;
-    max-width: 100vw !important;
-    margin-top: 70px !important;
-    padding: 20px !important;
-  }
-
-  
-  :root {
-    --animate-duration: 1000ms;
-    --animate-delay: 1s;
-  }
+  font-weight: bold;
+}
+.mat-snack-bar-container {
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: 40vw !important;
+  min-width: 90% !important;
+  max-width: 100vw !important;
+  margin-top: 70px !important;
+  padding: 20px !important;
+}

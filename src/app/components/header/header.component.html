@@ -1,23 +1,26 @@
-<mat-toolbar class="mat-elevation-z3">
-  <button mat-icon-button (click)="collapsed.set(!collapsed())">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <div class="theme-control">
-    <button mat-icon-button (click)="toggleTheme()" matTooltip="Alterar o tema">
-      @if (themeService.themeSignal() === 'dark') {
-      <mat-icon>bedtime</mat-icon>
-      } @else {
-      <mat-icon>light_mode</mat-icon>
-      }
-    </button>
+<header>
+  <nav class="navbar">
+    <div class="name">
+      <span>Ramon Trindade</span>
+      <mat-icon style="color: aquamarine">terminal</mat-icon>
+    </div>
+    <ul class="navbar-menu">
+      <li><a (click)="scrollToTecnology()">Projetos</a></li>
+      <li><a (click)="scrolToExperience()">Experiência</a></li>
+      <li><a (click)="scrollToAbout()">Sobre mim</a></li>
+      <li><a (click)="scrolToContact()">Contato</a></li>
+    </ul>
+    <mat-icon class="hamburger-menu" (click)="toggleMobileMenu()">
+      menu
+    </mat-icon>
+  </nav>
+  <div class="mobile-menu" [class.active]="isMobileMenuActive">
+    <mat-icon class="close-menu" (click)="closeMobileMenu()">close</mat-icon>
+    <ul>
+      <li><a (click)="scrollToTecnology()">Projetos</a></li>
+      <li><a (click)="scrolToExperience()">Experiência</a></li>
+      <li><a (click)="scrollToAbout()">Sobre mim</a></li>
+      <li><a (click)="scrolToContact()">Contato</a></li>
+    </ul>
   </div>
-</mat-toolbar>
-
-<mat-sidenav-container>
-  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
-    <app-sidenav [collapsed]="collapsed()"></app-sidenav>
-  </mat-sidenav>
-  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+</header>

@@ -1,63 +1,67 @@
-import {
-  Component,
-  HostListener,
-  OnInit,
-  computed,
-  inject,
-  signal,
-} from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { RouterOutlet } from '@angular/router';
-import { SidenavComponent } from '../sidenav/sidenav.component';
+import { Component, HostListener, ElementRef, inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbar } from '@angular/material/toolbar';
+import { ScrollBehaviorService } from '../../services/scroll-behavior.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatIconModule,
     MatButtonModule,
+    MatToolbar,
+    MatButtonToggleModule,
+    MatIconModule,
     CommonModule,
-    MatTooltipModule,
-    MatSidenavModule,
-    RouterOutlet,
-    SidenavComponent,
   ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  themeService: ThemeService = inject(ThemeService);
+export class HeaderComponent {
+  isMobileMenuActive = false;
+  private scrollService = inject(ScrollBehaviorService);
+  constructor(
+    private eRef: ElementRef,
+    private scrollBehavior: ScrollBehaviorService
+  ) {}
 
-  toggleTheme() {
-    this.themeService.updateTheme();
+  toggleMobileMenu(): void {
+    this.isMobileMenuActive = !this.isMobileMenuActive;
   }
 
-  collapsed = signal(false);
-
-  sidenavWidth = computed(() => (this.collapsed() ? '65px' : '250px'));
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.updateSidenavVisibility();
+  closeMobileMenu(): void {
+    this.isMobileMenuActive = false;
   }
 
-  ngOnInit() {
-    this.updateSidenavVisibility();
-  }
-
-  public updateSidenavVisibility() {
-    if (typeof window !== 'undefined')
-    if (window.innerWidth >= 768) {
-      this.collapsed.set(false);
-    } else {
-      this.collapsed.set(true);
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: Event): void {
+    if (
+      this.isMobileMenuActive &&
+      !this.eRef.nativeElement.contains(event.target)
+    ) {
+      this.closeMobileMenu();
     }
+  }
+
+  scrollToTecnology(): void {
+    this.scrollBehavior.scrollToSection('project');
+    this.closeMobileMenu();
+  }
+
+  scrolToExperience(): void {
+    this.scrollBehavior.scrollToSection('experience');
+    this.closeMobileMenu();
+  }
+
+  scrollToAbout(): void {
+    this.scrollBehavior.scrollToSection('about');
+    this.closeMobileMenu();
+  }
+
+  scrolToContact(): void {
+    this.scrollBehavior.scrollToSection('contact');
+    this.closeMobileMenu();
   }
 }
