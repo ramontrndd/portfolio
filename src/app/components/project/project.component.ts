@@ -52,5 +52,45 @@ export class ProjectComponent {
       github: 'https://github.com/ramontrndd/login-screen',
       demo: 'https://ramontrndd.github.io/login-screen/',
     },
+    {
+      title: 'Cafeteria - Backend',
+      image: 'back-end2.svg',
+      alt: 'imagem de tela de login',
+      description:
+        'Este projeto é um backend em Node.js com Express para CRUD em MySQL, foi desenvolvido com intuito de completar o meu projeto fullstack da Cafeteria, ele também faz geração de PDFs com Puppeteer, autenticação JWT, e uso de Docker para portabilidade. Usa EJS para templates HTML e dotenv para segurança de variáveis sensíveis, verifique a documentação e faça o teste da aplicação clicando em DEMO',
+      label: ['NodeJS', 'Express', 'MySQL', 'JWT', 'Docker'],
+      github: 'https://github.com/ramontrndd/cafe-management-backend',
+      demo: 'https://github.com/ramontrndd/cafe-management-backend',
+    },
+    {
+      title: 'Tucuju Previ',
+      image: 'tucujuprevi.png',
+      alt: 'apresetanção do projeto Tucuju Previ',
+      description:
+        'Projeto consiste no desenvolvimento de uma landing page, para uma empresa de serviços previdenciários administrativos. A página foi criada para refletir a missão da empresa de garantir o acesso justo e eficiente aos direitos previdenciários de seus cliente, com um design intuitivo e dinamico visa que seus usuários tenham uma boa experiencia. Verifique a documentação do projeto e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'HTML', 'SCSS'],
+      github: 'https://github.com/ramontrndd/tucujuprevi',
+      demo: 'https://www.tucujuprevi.com',
+    },
+    {
+      title: 'Tela login - Backend',
+      image: 'back-end1.svg',
+      alt: 'imagem de tela de login',
+      description:
+        'Este projeto consiste em um backend para uma tela de login. O backend foi desenvolvido em Node.js com Express, utilizando bcryptjs para criptografia de senhas e cookie-parser para manipulação de cookies. Ele permite aos usuários realizar cadastro, recuperação de senha e login de forma segura. Após o login, usuários aprovados têm acesso a um dashboard onde podem aprovar outros usuários. Verifique a documentação e faça o teste da aplicação clicando em DEMO.',
+      label: ['NodeJS', 'Express', 'MySQL', 'JWT', 'Docker'],
+      github: 'https://github.com/ramontrndd/login-backend',
+      demo: 'https://github.com/ramontrndd/login-backend',
+    },
+    {
+      title: 'Marketplace de Filmes',
+      image: 'marketplace-angular.png',
+      alt: 'menu de filmes',
+      description:
+        'Este projeto visa transformar a experiência de compra online, integrando tecnologias avançadas para criar um ambiente de compras mais eficiente e dinâmico. Utilizando Angular 17, implementei uma API Rest para acesso instantâneo a um vasto catálogo de produtos, com informações atualizadas em tempo real. Verifique a documentação do projeto e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'HTML', 'SCSS'],
+      github: 'https://github.com/ramontrndd/marketplace-angular',
+      demo: 'https://ramontrndd.github.io/marketplace-angular/home',
+    },
   ];
 }

@@ -15,11 +15,11 @@
 }
 mat-card-title {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     color: #fff;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-align: center;
   }
 }
@@ -34,8 +34,8 @@ mat-card-content {
 
   img {
     margin: 10px auto;
-    width: 100%;
-    height: auto;
+    width: 320px;
+    height: 200px;
     display: block;
     border-radius: 4px;
   }
