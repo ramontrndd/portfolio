@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  margin: 15px;
 }
 
 mat-dialog-content {
@@ -28,14 +29,6 @@ mat-dialog-content {
 
 .mat-mdc-form-field:not(.mat-form-field-no-animations) .mdc-text-field__input {
   color: white;
-}
-
-@media screen and (max-width: 480px) {
-  mat-dialog-content {
-    width: 100%;
-    max-width: 100%;
-    margin: 10px;
-  }
 }
 
 .social-links,
@@ -90,4 +83,11 @@ mat-dialog-content {
 
 .github {
   fill: #333;
+}
+@media screen and (max-width: 480px) {
+  mat-dialog-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 25px;
+  }
 }

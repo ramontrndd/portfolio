@@ -12,14 +12,16 @@ section {
   margin: 0 auto;
 
   > p {
-    margin: 0;
-    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
     font-size: 1.3rem;
     text-align: justify;
     line-height: 1.5;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-bottom: 10px;
+    background-color: #15001fd5;
   }
 }
 h1 {
@@ -69,10 +71,18 @@ h1 {
     font-size: 1rem;
     padding: 15px;
   }
+  .card p {
+    text-align: justify;
+    padding: 15px;
+  }
 }
 @media (381px <= width <= 728px) {
   section p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .card p {
+    text-align: justify;
     padding: 15px;
   }
 }

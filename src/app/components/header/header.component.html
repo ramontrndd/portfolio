@@ -5,10 +5,10 @@
       <mat-icon style="color: aquamarine">terminal</mat-icon>
     </div>
     <ul class="navbar-menu">
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#sobre-mim">Sobre mim</a></li>
-      <li><a href="#sobre-mim">Contato</a></li>
+      <li><a (click)="scrollToTecnology()">Projetos</a></li>
+      <li><a (click)="scrolToExperience()">Experiência</a></li>
+      <li><a (click)="scrollToAbout()">Sobre mim</a></li>
+      <li><a (click)="scrolToContact()">Contato</a></li>
     </ul>
     <mat-icon class="hamburger-menu" (click)="toggleMobileMenu()">
       menu
@@ -17,12 +17,10 @@
   <div class="mobile-menu" [class.active]="isMobileMenuActive">
     <mat-icon class="close-menu" (click)="closeMobileMenu()">close</mat-icon>
     <ul>
-      <li><a href="#projetos" (click)="closeMobileMenu()">Projetos</a></li>
-      <li>
-        <a href="#experiencia" (click)="closeMobileMenu()">Experiência</a>
-      </li>
-      <li><a href="#sobre-mim" (click)="closeMobileMenu()">Sobre mim</a></li>
-      <li><a href="#sobre-mim" (click)="closeMobileMenu()">Contato</a></li>
+      <li><a (click)="scrollToTecnology()">Projetos</a></li>
+      <li><a (click)="scrolToExperience()">Experiência</a></li>
+      <li><a (click)="scrollToAbout()">Sobre mim</a></li>
+      <li><a (click)="scrolToContact()">Contato</a></li>
     </ul>
   </div>
 </header>

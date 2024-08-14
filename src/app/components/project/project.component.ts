@@ -52,5 +52,65 @@ export class ProjectComponent {
       github: 'https://github.com/ramontrndd/login-screen',
       demo: 'https://ramontrndd.github.io/login-screen/',
     },
+    {
+      title: 'Cafeteria',
+      image: 'cafeteria.png',
+      alt: 'imagem de um dashboard',
+      description:
+        'Este projeto inovador visa otimizar a gestão de cafeterias através de uma aplicação robusta e intuitiva. Desenvolvido com tecnologia Node.js para o backend e formulários reativos para uma experiência de usuário dinâmica, oferece uma plataforma completa para gerenciar pedidos, adicionar produtos, e até mesmo gerar PDFs de pedidos com facilidade. Verifique a documentação do projeto e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'HTML', 'SCSS'],
+      github: 'https://github.com/ramontrndd/cafe-management-front',
+      demo: 'https://ramontrndd.github.io/cafe-management-front/',
+    },
+    {
+      title: 'Tela de login',
+      image: 'tela-login.png',
+      alt: 'imagem de tela de login',
+      description:
+        'Este projeto foi desenvolvido para ilustrar a funcionalidade de uma tela de login em uma aplicação. Nele, ao realizar o login, a chave Token do usuário é armazenada nos cookies. Além disso, foi implementado o Router-Guard do Angular, garantindo que, caso essa chave esteja vazia ou nula, o usuário seja automaticamente redirecionado para a tela de login, verifique a documentação e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'Html', 'Scss'],
+      github: 'https://github.com/ramontrndd/login-screen',
+      demo: 'https://ramontrndd.github.io/login-screen/',
+    },
+    {
+      title: 'Cafeteria',
+      image: 'cafeteria.png',
+      alt: 'imagem de um dashboard',
+      description:
+        'Este projeto inovador visa otimizar a gestão de cafeterias através de uma aplicação robusta e intuitiva. Desenvolvido com tecnologia Node.js para o backend e formulários reativos para uma experiência de usuário dinâmica, oferece uma plataforma completa para gerenciar pedidos, adicionar produtos, e até mesmo gerar PDFs de pedidos com facilidade. Verifique a documentação do projeto e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'HTML', 'SCSS'],
+      github: 'https://github.com/ramontrndd/cafe-management-front',
+      demo: 'https://ramontrndd.github.io/cafe-management-front/',
+    },
+    {
+      title: 'Tela de login',
+      image: 'tela-login.png',
+      alt: 'imagem de tela de login',
+      description:
+        'Este projeto foi desenvolvido para ilustrar a funcionalidade de uma tela de login em uma aplicação. Nele, ao realizar o login, a chave Token do usuário é armazenada nos cookies. Além disso, foi implementado o Router-Guard do Angular, garantindo que, caso essa chave esteja vazia ou nula, o usuário seja automaticamente redirecionado para a tela de login, verifique a documentação e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'Html', 'Scss'],
+      github: 'https://github.com/ramontrndd/login-screen',
+      demo: 'https://ramontrndd.github.io/login-screen/',
+    },
+    {
+      title: 'Cafeteria',
+      image: 'cafeteria.png',
+      alt: 'imagem de um dashboard',
+      description:
+        'Este projeto inovador visa otimizar a gestão de cafeterias através de uma aplicação robusta e intuitiva. Desenvolvido com tecnologia Node.js para o backend e formulários reativos para uma experiência de usuário dinâmica, oferece uma plataforma completa para gerenciar pedidos, adicionar produtos, e até mesmo gerar PDFs de pedidos com facilidade. Verifique a documentação do projeto e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'HTML', 'SCSS'],
+      github: 'https://github.com/ramontrndd/cafe-management-front',
+      demo: 'https://ramontrndd.github.io/cafe-management-front/',
+    },
+    {
+      title: 'Tela de login',
+      image: 'tela-login.png',
+      alt: 'imagem de tela de login',
+      description:
+        'Este projeto foi desenvolvido para ilustrar a funcionalidade de uma tela de login em uma aplicação. Nele, ao realizar o login, a chave Token do usuário é armazenada nos cookies. Além disso, foi implementado o Router-Guard do Angular, garantindo que, caso essa chave esteja vazia ou nula, o usuário seja automaticamente redirecionado para a tela de login, verifique a documentação e faça o teste da aplicação clicando em DEMO',
+      label: ['Angular', 'Angular Material', 'Html', 'Scss'],
+      github: 'https://github.com/ramontrndd/login-screen',
+      demo: 'https://ramontrndd.github.io/login-screen/',
+    },
   ];
 }
