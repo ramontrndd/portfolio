@@ -1,13 +1,14 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
+
 import { AboutComponent } from './components/about/about.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectComponent } from './components/project/project.component';
-import { GuideButtonComponent } from './shared/shared-ui/guide-button/guide-button.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProjectComponent } from './components/project/project.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { GuideButtonComponent } from './shared/shared-ui/guide-button/guide-button.component';
 
 @Component({
   selector: 'app-root',
@@ -28,5 +29,4 @@ import { ExperienceComponent } from './components/experience/experience.componen
 })
 export class AppComponent {
   title = 'portfolio';
-  @ViewChild('loadProjectComponent') loadProjectComponent!: ElementRef;
 }
