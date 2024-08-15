@@ -3,11 +3,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 15px;
+  margin: 10px;
 }
 main {
-margin: 0px;
-padding: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 mat-dialog-content {
   background-color: #190425;
