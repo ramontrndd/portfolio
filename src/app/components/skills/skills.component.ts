@@ -12,6 +12,26 @@ import { Card } from '../../shared/models/Card';
 export class SkillsComponent implements OnInit {
   cardSKills: Card[] = [
     {
+      title: 'Java',
+      image:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+    },
+    {
+      title: 'Spring Boot',
+      image:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
+    },
+    {
+      title: 'React',
+      image:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    },
+    {
+      title: 'Next.js',
+      image:
+        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    },
+    {
       title: 'Angular',
       image:
         'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
